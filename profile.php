@@ -281,61 +281,31 @@
         </div>
     </div>
 
-    <!--NEW ARRIVAL-------------------------------->
-    <section class="new-arrival">
-
-        <!--heading-------->
-        <div class="arrival-heading">
-            <strong>New Arrival</strong>
-            <p>We Provide You New Fasion Design Clothes</p>
-        </div>
-        <!--products----------------------->
-        <div class="product-container">
+    <div class="container">
+        <!-- Profile information -->
+        <div class="profile-info">
+            <h2>Profile Information</h2>
             <?php
-            $connect = mysqli_connect('localhost', 'root', '', 'mydb');
-            if (!$connect) {
-                echo "Failed";
-            }
-            $sql = "SELECT * FROM product";
-
-
-            $result = mysqli_query($connect, $sql);
-            //Tìm và trả về kết quả dưới dạng 1 mảng và lấy từng dòng dữ liệu
-
-
-            while ($row = mysqli_fetch_array($result)) {
-
-
-                //lấy ra từng dòng dữ liệu truy vấn được và hiển thị
-                //$row['product_id'];
-                //$row['product_name'];
-                //$row['product_img'];
-                //$row['product_price'];
-
+            // Sample fake user data
+            $user = array(
+                'fullname' => 'John Doe',
+                'email' => 'aaa@gmail.com',
+                'address' => 'Tòa D, 13 P. Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm, Hà Nội ',
+                'phone' => '+1234567890',
+                'birthdate' => 'January 1, 1990'
+            );
             ?>
-                <!--product-box-1---------->
-                <div class="product-box">
-                    <!--product-img------------>
-                    <div class="product-img">
-                        <!--add-cart---->
-                        <a href="cart.php?id=<?php echo $row['pid'] ?>" class="add-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <!--img------>
-                        <a href="detail.php?id=<?php echo $row['pid'] ?>"><img src="<?php echo $row['pimg'] ?>"></a>
-                    </div>
-                    <!--product-details-------->
-                    <div class="product-details">
-                        <a href="detail.php?id=<?php echo $row['pid'] ?>" class="p-name"><?php echo $row['pname'] ?> </a>
-                        <span class="p-price"><?php echo $row['pprice'] ?> </span>
 
-                    </div>
+            <p><strong>Full Name:</strong> <?php echo $user['fullname']; ?></p>
+            <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
+            <p><strong>Address:</strong> <?php echo $user['address']; ?></p>
+            <p><strong>Phone:</strong> <?php echo $user['phone']; ?></p>
+            <p><strong>Birthdate:</strong> <?php echo $user['birthdate']; ?></p>
+        </div>
 
-                </div><?php
-                    }
-                        ?>
+        <!-- Additional profile sections can be added as needed -->
 
-    </section>
+    </div>
     
 
 

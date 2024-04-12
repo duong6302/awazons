@@ -317,7 +317,17 @@ if(isset($_POST['login'])){
     
     </script>
 
-
+<footer>
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <p>Have questions? We're here to help! Reach out to our friendly support team:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@example.com">admin@gmail.com</a></li>
+                <li>Phone: <a href="tel:+11234567890">+00000000000</a></li>
+                <li>Address: Tòa D, 13 P. Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm, Hà Nội</li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

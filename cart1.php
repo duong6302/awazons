@@ -286,8 +286,8 @@
 
         <!--heading-------->
         <div class="arrival-heading">
-            <strong>New Arrival</strong>
-            <p>We Provide You New Fasion Design Clothes</p>
+            <strong>Your Cart</strong>
+            <p>The product have been choose</p>
         </div>
         <!--products----------------------->
         <div class="product-container">
@@ -331,7 +331,13 @@
 
                     </div>
 
-                </div><?php
+                </div>
+                    <!-- Purchase button -->
+    <form method="post" action="purchase.php">
+        <button type="submit" name="purchase">Purchase</button>
+    </form>
+
+                <?php
                     }
                         ?>
 
